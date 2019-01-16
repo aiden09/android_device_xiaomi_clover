@@ -23,6 +23,9 @@
 # *not* include it on all devices, so it is safe even with hardware-specific
 # components.
 
+# Fix build for Oreo
+ALLOW_MISSING_DEPENDENCIES=true
+
 # Architecture
 TARGET_ARCH := arm64
 TARGET_ARCH_VARIANT := armv8-a
@@ -101,3 +104,6 @@ TW_INPUT_BLACKLIST := "hbtp_vm"
 TW_MAX_BRIGHTNESS := 4095
 TW_THEME := portrait_hdpi
 TW_SCREEN_BLANK_ON_BOOT := true
+TWRP_INCLUDE_LOGCAT := true
+TARGET_USES_LOGD := true
+TW_HAS_DOWNLOAD_MODE := true
